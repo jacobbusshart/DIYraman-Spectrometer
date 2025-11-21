@@ -1,7 +1,6 @@
 # DIYRaman – Open Hardware Raman Spectrometer 
 
-An open, modular Raman spectrometer you can build, understand, and modify –  
-with documentation aimed at hobbyists, educators, and low-resource labs.
+An open, modular Raman spectrometer you can build, understand, and modify –  with documentation aimed at hobbyists, educators, and low-resource labs.
 
 ![Full Assembly in Overpressure Glove Box without Cuvette](assets/images_pictures/Overview-Video-Pic_1_1400px_JPG.jpg)
 
@@ -9,16 +8,24 @@ The goal is to make Raman spectroscopy **replicable, affordable, and well-docume
 
 - broad substance and drug identification *(qualitative, exploratory)*,
 - basic materials identification,
-- teaching optics and spectroscopy,
-- exploratory / DIY counterfeit screening.
+- teaching optics and spectroscopy.
 
 
- Built from common cost-efficient parts and repurposed components:
+ Built from cost-efficient parts and repurposed components:
  
-- a surplus spectrometer module (e.g. B&W Tek),
-- a low-cost 532 nm green laser,
-- 3D-printed mechanical parts,
-- and widely available optics and electronics.
+- a surplus spectrometer module [(B&W Tek - eBay](https://www.ebay.com/itm/143989529085)),
+- a cheap 532nm laser pointer,
+- 3D-printed parts,
+- various used components.
+
+
+For performance and reproducibility, essential optics had to be purchased new from Thorlabs and Edmund Optics – the most costly portion of this build:
+
+- Dichroic Mirror (DMLP550 - Thorlabs, 230$)
+- Longpass Filter (FELH0550 - Thorlabs, 170$)
+- (Optional) Bandpass Filter (#65640 - Edmund Optics, 95$)
+
+A detailed overview of all the used parts and cost can be found under `/bom/BOM (Bill of Materials).md`
 
 
 This repository contains:
@@ -34,6 +41,8 @@ This repository contains:
 ---
 
 ## Who is this for?
+
+![](assets/images_pictures/Video-Pic_Setup_4_1400px_JPG.jpg)
 
 DIYRaman is designed for:
 
@@ -57,23 +66,16 @@ You should be comfortable with:
 
 ## What can it do?
 
-A completed build can:
-
-- excite samples with a **532 nm laser** in a backscattering geometry,  
-- collect Raman-scattered light with a microscope objective,  
-- separate laser light from Raman signal using a **dichroic + longpass filter stack**,  
-- feed the signal into a compact spectrometer module,  
-- display and save spectra with an open-source GUI.
-
-Target capabilities (current reference build):
+The completed Raman build offers:
 
 - **Stokes region** above ~600 cm⁻¹  
 - solids / liquids in a cuvette-type sample holder  
 - qualitative & educational use (comparison, teaching, demos)  
 - extensible design (alternative spectrometers, lasers, mechanics)
 
+
 > 🧪 **Drug / counterfeit screening**  
-> The system can be used for *exploratory, educational* screening of unknowns (e.g. counterfeit pills) but **must not** be treated as a validated forensic tool. **Always cross-check with certified methods when decisions matter!**
+> The system can be used for *exploratory, educational* screening of unknowns (e.g. counterfeit pills) but **must not** be treated as a validated forensic tool. **Always cross-check with certified methods!**
 
 ---
 
@@ -88,6 +90,7 @@ Current module status:
 - ✅ **Basic Raman Optical Assembly** – documented and buildable  
 - ✅ **Overpressure Glove Box** – documented and buildable  
 - 🟡 **Linear Translation Stage** – documented, design still being adjusted  
+- 🟡 **Spectrometer Unit** – usable, documentation in progress  
 - 🟠 **Full Raman Optical Assembly** – documentation in progress  
 - 🔴 **First Acquisition & Software / GUI** – unpublished  
 
@@ -115,6 +118,8 @@ parts/                    # .STL-files for 3D-printing
   basic-assembly/
   glovebox/
 
+results/                  # Captured example spectra
+
 software/                 # Planned
 
 
@@ -138,9 +143,11 @@ LICENSES/
 
 A suggested build order for new users:
 
-1. **Overpressure Glove Box**  
+1. **Spectrometer Setup**  
+   – Become comfortable with the operation of the spectrometer unit .  
+2. **Overpressure Glove Box**  
    – Keep dust away from optics and make laser alignment safer.  
-2. **Basic Raman Optical Assembly**  
+3. **Basic Raman Optical Assembly**  
    – Align the basic backscattering optical path.  
    - *Acquire your first rough spectrum.*  
 3. **Linear Translation Stage**  
@@ -152,13 +159,6 @@ A suggested build order for new users:
    – Calibrate wavelength axis and intensity where feasible.  
 6. **Upgrade options** *(planned)*  
    – Alternative optics, higher-quality mechanics, software features.
-
-All build docs aim to:
-
-- use clear, active steps,
-- reference BOM IDs consistently,
-- pair each critical step with a photo or diagram,
-- highlight risks and pitfalls via callouts.
 
 
 ![](../../assets/images_pictures/Overview-Video-Pic_3_1400px_JPG.jpg)
@@ -231,5 +231,6 @@ All **software** in this repository (code and firmware) is licensed under:
 
 ---
 
+*NOTE: Some parts of the written documentation has been formatted or translated using AI.*
 
 ![](../../assets/images_pictures/Video-Pic_Setup_3_1400px_JPG.jpg)

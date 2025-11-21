@@ -16,7 +16,7 @@ This stage uses:
 The design is simple to print and tune, and accurate enough to focus the final lens or fibre position onto the spectrometer input.
 
 > [!NOTE] Where this stage is used  
-> In the recommended build path, this translation stage sits underneath the **Focusing Assembly** [Focusing Assembly](Basic%20Raman%20Optical%20Assembly.md#Focusing%20Assembly)in the [Full Raman Optical Assembly](Full%20Raman%20Optical%20Assembly.md).  
+> In the recommended build path, this translation stage sits underneath the **Focusing Assembly** [Focusing Assembly](Basic%20Raman%20Optical%20Assembly.md#Focusing%20Assembly) in the [Full Raman Optical Assembly](Full%20Raman%20Optical%20Assembly.md).  
 > It is **not** required for the [Basic Raman Optical Assembly](Basic%20Raman%20Optical%20Assembly.md) but strongly recommended for comfortable fine focus adjustment.
 
 ---
